@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.9.4/styles/salesforce-lightning-design-system.min.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+	<header>
+		<article class="f-box slds-p-vertical_small slds-p-horizontal_large">
+			<div class="align-left">
+				<div class="slds-hide_small" style="display: inline-block">
+					<button class="slds-button slds-button_icon slds-p-bottom_large" title="Menu" onclick="handleClick()">
+						&#9776;
+					</button>
+				</div>
+				<div style="display: inline-block">
+					<p>ROCX</p>
+					<p>PLATFORM</p>
+				</div>
+			</div>
+			<div class="slds-p-horizontal_small slds-show_small">
+				<span class="slds-text-title">
+					Dashboard
+				</span>
+			</div>
+			<div class="slds-p-horizontal_small alert_image">
+				<span>
+					<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle dropdown_image" src="notification_60.png"/>
+				</span>
+			</div>
+			<div class="slds-p-horizontal_small">
+				<span>
+					<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+				</span>
+			</div>
+			<div class="slds-p-horizontal_small slds-show_small">
+				<span class="slds-text-title">
+					Stina Gunnarsdottir
+				</span>
+			</div>
+			<div class="slds-p-horizontal_small slds-show_small">
+				<span>
+					<img class="slds-size_xxx-small slds-m-bottom_medium slds-avatar_circle dropdown_image" src="./chevrondown_60.png"/>
+				</span>
+			</div>
+		</article>
+	</header>
+	<main class="slds-grid">
+		<div class="slds-col slds-show_small side-bar" id="side-bar">
+			<nav class="slds-nav-vertical" aria-label="Sub page">
+				<div class="slds-nav-vertical__section">
+					<h2 id="entity-header" class="slds-nav-vertical__title">SUMMARY</h2>
+					<ul aria-describedby="entity-header">
+						<li class="slds-nav-vertical__item ">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">Account Summary</a>
+						</li>
+					</ul>
+				</div>
+				<div class="slds-nav-vertical__section">
+					<h2 id="folder-header" class="slds-nav-vertical__title">INVESTMENTS</h2>
+					<ul aria-describedby="folder-header">
+						<li class="slds-nav-vertical__item">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">My Investments</a>
+						</li>
+						<li class="slds-nav-vertical__item slds-is-active">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="true">Investor List</a>
+						</li>
+					</ul>
+				</div>
+				<div class="slds-nav-vertical__section">
+					<h2 id="entity-header" class="slds-nav-vertical__title">DOCUMENTS</h2>
+					<ul aria-describedby="entity-header">
+						<li class="slds-nav-vertical__item ">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">My Documents</a>
+						</li>
+						<li class="slds-nav-vertical__item ">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">Delegate Document</a>
+						</li>
+					</ul>
+				</div>
+				<div class="slds-nav-vertical__section">
+					<h2 id="entity-header" class="slds-nav-vertical__title">TRANSACTIONS</h2>
+					<ul aria-describedby="entity-header">
+						<li class="slds-nav-vertical__item ">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">My Transactions</a>
+						</li>
+					</ul>
+				</div>
+				<div class="slds-nav-vertical__section">
+					<h2 id="entity-header" class="slds-nav-vertical__title">DELEGATE</h2>
+					<ul aria-describedby="entity-header">
+						<li class="slds-nav-vertical__item ">
+							<a href="javascript:void(0);" class="slds-nav-vertical__action">My Delegate</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="slds-col slds-m-vertical_large" id="main_bar">
+			<header class="slds-show_small">
+				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_large">
+					<div style="flex-grow: 15">
+						<span class="slds-text-title slds-align_absolute-center name">
+							Name
+						</span>
+					</div>
+					<div style="flex-grow: 1">
+						<span class="slds-text-title slds-align_absolute-center">
+							Total Contribution
+						</span>
+					</div>
+					<div style="flex-grow: 1">
+						<span class="slds-text-title slds-align_absolute-center">
+							Total Distributions
+						</span>
+					</div>
+					<div style="flex-grow: 1">
+						<span class="slds-text-title slds-align_absolute-center">
+							Total Balance
+						</span>
+					</div>
+					<div style="flex-grow: 10">
+						<span class="slds-text-title slds-align_absolute-center">
+							Details
+						</span>
+					</div>
+				</article>
+			</header>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-m-top_medium slds-p-vertical_small slds-p-horizontal_medium">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+			<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+				<div class="slds-hide_small slds-text-align_right">
+					<span class="slds-text-title slds-text-align_right more_options">
+						...
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center">
+						<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
+					</span>
+				</div>
+				<div class="name_section">
+					<span class="slds-align_absolute-center">
+						Ivan Magalhaes
+					</span>
+				</div>
+				<div>
+					<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+						abcdef@xyz.com
+					</span>
+				</div>
+				<div>
+					<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+						Total Contribution
+					</span>
+				</div>
+				<div>
+					<span class="slds-align_absolute-center val slds-m-bottom_medium">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small val slds-align_absolute-center">
+						$814,321
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+						<a>View Details</a>
+					</span>
+				</div>
+				<div>
+					<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+						<a>View</a>
+					</span>
+				</div>
+				<div class="slds-show_small slds-p-bottom_x-small">
+					<span class="slds-text-title more_options">
+						...
+					</span>
+				</div>
+			</article>
+		</div>
+	</main>
+	<script type="text/javascript" src="./script.js">
+	</script>
+</body>
+</html>
