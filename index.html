@@ -131,20 +131,20 @@
 				</div>
 				<div class="slds-form-element slds-p-around_small slds-m-horizontal_xx-small">
 					<button class="slds-button slds-button_icon">
-						<img class="slds-icon slds-icon-text-default" onclick="show_card_view()" src="./tile_card_list_60.png">
+						<img id="card-view" class="slds-icon slds-icon-text-default" onclick="show_card_view(event)" src="./tile_card_list_60.png">
 					</button>
 					<button class="slds-button slds-button_icon">
-						<img class="slds-icon slds-icon-text-default" onclick="show_table_view()" src="./rows_60.png">
+						<img id="table-view" class="slds-icon slds-icon-text-default" onclick="show_table_view(event)" src="./rows_60.png">
 					</button>
 				</div>
 				<div class="slds-form-element slds-m-horizontal_xx-small">
 					<img class="slds-icon slds-icon-text-default" src="./download_60.png">
 				</div>
 			</div>
-			<div class="slds-grid slds-grid_vertical">
+			<div id="cards-holder" class="slds-grid slds-grid_vertical">
 				<header id="table-header" class="slds-show_small">
 					<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_large">
-						<div style="flex-grow: 15">
+						<div style="flex-grow: 11">
 							<span class="slds-text-title slds-align_absolute-center name">
 								Name
 							</span>
@@ -171,465 +171,465 @@
 						</div>
 					</article>
 				</header>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-m-top_medium slds-p-vertical_small slds-p-horizontal_medium">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-m-top_medium slds-p-vertical_small slds-p-horizontal_medium">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
 					</div>
-					<div class="name_section">
+					<div class="name_section both-show">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class=" slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="table-show slds-show_small">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="card-show slds-hide_small">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small slds-show_small table-show">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
 					</div>
 				</article>
-				<article class="slds-card flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
-					<div class="slds-hide_small slds-text-align_right">
+				<article class="slds-card slds-col flexbox slds-m-horizontal_large slds-p-vertical_small slds-p-horizontal_medium card1">
+					<div class="slds-hide_small slds-text-align_right card-show">
 						<span class="slds-text-title slds-text-align_right more_options">
 							...
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center">
 							<img class="slds-size_xx-small slds-m-bottom_medium slds-avatar_circle image_section" src="https://source.unsplash.com/400x400/?headshot"/>
 						</span>
-					</div>
+					</div class="both-show">
 					<div class="name_section">
 						<span class="slds-align_absolute-center">
 							Ivan Magalhaes
 						</span>
 					</div>
-					<div>
-						<span class="slds-text-title slds-hide_small slds-align_absolute-center">
+					<div class="card-show slds-hide_small">
+						<span class="slds-text-title slds-align_absolute-center">
 							abcdef@xyz.com
 						</span>
 					</div>
-					<div>
-						<span class="slds-hide_small slds-text-title slds-m-top_medium slds-align_absolute-center">
+					<div class="slds-hide_small card-show">
+						<span class="slds-text-title slds-m-top_medium slds-align_absolute-center">
 							Total Contribution
 						</span>
 					</div>
-					<div>
+					<div class="both-show">
 						<span class="slds-align_absolute-center val slds-m-bottom_medium">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small val slds-align_absolute-center">
+					<div class="slds-show_small table-show">
+						<span class="val slds-align_absolute-center">
 							$814,321
 						</span>
 					</div>
 					<hr/>
-					<div>
-						<span class="slds-hide_small slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-hide_small card-show">
+						<span class="slds-align_absolute-center slds-text-title slds-p-vertical_xx-small">
 							<a>View Details</a>
 						</span>
 					</div>
-					<div>
-						<span class="slds-show_small slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
+					<div class="slds-show_small table-show">
+						<span class="slds-align_absolute-center view_link slds-text-title slds-p-vertical_xx-small">
 							<a>View</a>
 						</span>
 					</div>
-					<div class="slds-show_small slds-p-bottom_x-small">
+					<div class="slds-p-bottom_x-small table-show slds-show_small">
 						<span class="slds-text-title more_options">
 							...
 						</span>
