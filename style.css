@@ -21,7 +21,7 @@ h2{
 	background-color: #fcfcfc;
 	justify-content: flex-end;
 	align-items: center;
-	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+	box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.05);
 }
 .align-left{
 	flex-grow: 1;
@@ -48,7 +48,6 @@ li a{
 
 .side-bar{
 	background: rgb(48,48,48);
-	width:80% !important;
 }
 
 @media (min-width: 480px){
@@ -98,4 +97,10 @@ li a{
 header .image_section{
 	width:30px;
 	height:30px;
+}
+
+.hamburger, .close-menu{
+	justify-content: flex-start;
+	width:25px;
+	height:25px;
 }
